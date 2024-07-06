@@ -47,8 +47,6 @@ jobs:
                   -backend-config="container_name=$BACKEND_STORAGE_CONTAINER_NAME" \
                   -backend-config="key=$TF_BACKEND_KEY" \
                   -backend-config="use_oidc=true"
-                
-                terraform validate -var-file="parameters/dev.tfvars"
 
                 terraform apply -var-file="parameters/dev.tfvars" -auto-approve
 
