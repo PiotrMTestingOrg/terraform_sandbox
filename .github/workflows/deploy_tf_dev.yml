@@ -38,7 +38,7 @@ jobs:
                 BACKEND_RESOURCE_GROUP_NAME: rg-tf-storage
                 BACKEND_STORAGE_ACCOUNT_NAME: satfdevproject
                 BACKEND_STORAGE_CONTAINER_NAME: terraform
-                ARM_USE_MSI: true
+                ARM_USE_OIDC: true
                 TF_BACKEND_KEY: dev/terraform.tfstate
               working-directory: iaac/
               run: |
@@ -47,6 +47,7 @@ jobs:
                   -backend-config="storage_account_name=$BACKEND_STORAGE_ACCOUNT_NAME" \
                   -backend-config="container_name=$BACKEND_STORAGE_CONTAINER_NAME" \
                   -backend-config="key=$TF_BACKEND_KEY"
+                  -backend-config="use_oidc=true"
                 
                 terrafrom validate -var-file="parameters/dev.tfvars"
 
