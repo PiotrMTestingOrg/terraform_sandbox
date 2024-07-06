@@ -1,0 +1,5 @@
+resource_group_name  = "rg-tf-storage"
+storage_account_name = "satfdevproject"
+container_name       = "terraform"
+key                  = "test/terraform.tfstate"
+use_azuread_auth     = true   
