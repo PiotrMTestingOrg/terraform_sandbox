@@ -38,7 +38,7 @@ jobs:
                 BACKEND_RESOURCE_GROUP_NAME: rg-tf-storage
                 BACKEND_STORAGE_ACCOUNT_NAME: satfdevproject
                 BACKEND_STORAGE_CONTAINER_NAME: terraform
-                USE_OIDC: true
+                ARM_USE_MSI: true
                 TF_BACKEND_KEY: dev/terraform.tfstate
               working-directory: iaac/
               run: |
