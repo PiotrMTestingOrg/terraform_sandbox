@@ -45,4 +45,4 @@ jobs:
                   -backend-config="key=$TF_BACKEND_KEY" \
                   -backend-config="use_oidc=true"
 
-                terraform apply -var-file="parameters/dev.tfvars" -auto-approve
+                terraform apply -var-file="parameters/test.tfvars" -auto-approve
