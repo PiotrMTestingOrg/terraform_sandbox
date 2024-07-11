@@ -7,8 +7,9 @@ terraform init -backend-config ="parameters/backend_dev.hcl"
 terraform init -backend-config=parameters/backend_dev.hc
 
 terraform init -reconfigure -backend-config="backend_configs/dev.azurerm.tfbackend"
-terraform plan -var-file="parameters/dev.tfvars" -auto-approve
+terraform plan -var-file="parameters/dev.tfvars"
 terraform apply -var-file="parameters/dev.tfvars" -auto-approve
+terraform apply -var-file="parameters/dev.tfvars" -refresh-only
 terraform destroy -var-file="parameters/dev.tfvars" -auto-approve
 
 terraform init -reconfigure -backend-config="backend_configs/test.conf" 
