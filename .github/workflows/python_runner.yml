@@ -5,6 +5,8 @@ on:
         branches:
         - chore/git_demo  # Change to your default branch
     workflow_dispatch: 
+    schedule:
+      - cron: '*/5 * * * *' # Runs every hour
 
 env:
   TEST_USER: ${{ secrets.TEST_USER }}
