@@ -8,6 +8,7 @@ on:
 
 env:
   TEST_USER: ${{ secrets.TEST_USER }}
+  USER_VAR: ${{ vars.USER_VAR }}
 
 jobs:
   run-python-script:
