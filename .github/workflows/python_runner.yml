@@ -6,6 +6,9 @@ on:
         - chore/git_demo  # Change to your default branch
     workflow_dispatch: 
 
+env:
+  TEST_USER: ${{ secrets.TEST_USER }}
+
 jobs:
   run-python-script:
     runs-on: ubuntu-latest  # Specify the runner environment
