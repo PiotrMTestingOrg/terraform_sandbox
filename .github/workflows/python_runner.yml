@@ -1,8 +1,9 @@
 name: Run Python Script
 
 on:
-  schedule:
-    - cron: '*/6 * * * *' # Runs every hour
+  # schedule:
+  #   - cron: '*/6 * * * *' # Runs every hour
+  workflow_dispatch: 
 
 env:
   TEST_USER: ${{ secrets.TEST_USER }}
